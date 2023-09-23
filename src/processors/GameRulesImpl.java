@@ -33,15 +33,15 @@ public class GameRulesImpl implements GameRules {
 
         switch (playerMove) {
             case ROCK:
-                if (cpuMove.equals(GameSymbol.SCISSOR))
+                if (cpuMove.equals(GameSymbol.SCISSORS)) // crushes lizard
                     return WINNER_MESSAGE;
                 return LOOSER_MESSAGE;
             case PAPER:
-                if (cpuMove.equals(GameSymbol.ROCK))
+                if (cpuMove.equals(GameSymbol.ROCK)) // disprove Spock
                     return WINNER_MESSAGE;
                 return LOOSER_MESSAGE;
-            case SCISSOR:
-                if (cpuMove.equals(GameSymbol.PAPER))
+            case SCISSORS:
+                if (cpuMove.equals(GameSymbol.PAPER)) // decapitates lizard
                     return WINNER_MESSAGE;
                 return LOOSER_MESSAGE;
             default:
