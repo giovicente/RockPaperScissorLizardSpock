@@ -59,11 +59,11 @@ public class GameRulesImpl implements GameRules {
 
     @Override
     public int checksSymbol(Scanner gameScanner) {
-        System.out.println("Select your Symbol: Rock = 0, Paper = 1, Scissor = 2, Lizard = 3, Spock = 4: ");
+        System.out.println("Select your Symbol: Rock = 0, Paper = 1, Scissors = 2, Lizard = 3, Spock = 4: ");
         int playerChoice = gameScanner.nextInt();
 
         while (isInvalidSymbol(playerChoice)) {
-            System.out.println("Invalid answer! Please Select your Symbol Correctly: Rock = 0, Paper = 1, Scissor = 2, Lizard = 3, Spock = 4: ");
+            System.out.println("Invalid answer! Please Select your Symbol Correctly: Rock = 0, Paper = 1, Scissors = 2, Lizard = 3, Spock = 4: ");
             playerChoice = gameScanner.nextInt();
         }
 
