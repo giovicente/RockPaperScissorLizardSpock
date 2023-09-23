@@ -63,7 +63,7 @@ public class GameRulesImpl implements GameRules {
         int playerChoice = gameScanner.nextInt();
 
         while (isInvalidSymbol(playerChoice)) {
-            System.out.println("Invalid answer! Please Select your Symbol Correctly: Rock = 0, Paper = 1, Scissors = 2, Lizard = 3, Spock = 4: ");
+            System.out.println("Invalid answer!!! Please Select your Symbol Correctly: Rock = 0, Paper = 1, Scissors = 2, Lizard = 3, Spock = 4: ");
             playerChoice = gameScanner.nextInt();
         }
 
@@ -80,7 +80,7 @@ public class GameRulesImpl implements GameRules {
         char playAgain = Character.toUpperCase(gameScanner.next().charAt(0));
 
         while (isInvalidContinuityAnswer(playAgain)) {
-            System.out.println("Invalid answer! Please just type 'Y' or 'N': ");
+            System.out.println("Invalid answer!!! Please just type 'Y' or 'N': ");
             playAgain = Character.toUpperCase(gameScanner.next().charAt(0));
         }
 

@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class GameLoop {
 
     public static void runGame() {
-        System.out.println("Welcome to the Rock, Paper, Scissors, Lizard and Spock Game!");
+        System.out.println("Welcome to the Rock, Paper, Scissors, Lizard and Spock Game!!!");
         Scanner gameScanner = new Scanner(System.in);
         GameRules gameRules = new GameRulesImpl();
         char playAgain;
