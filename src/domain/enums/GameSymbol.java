@@ -8,7 +8,9 @@ import lombok.Getter;
 public enum GameSymbol {
     ROCK("🪨"),
     PAPER("📃"),
-    SCISSORS("✂️");
+    SCISSORS("✂️"),
+    LIZARD("🦎"),
+    SPOCK("🖖🏼");
 
     private String emojiSymbol;
 }

@@ -8,7 +8,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class GameRulesImpl implements GameRules {
-    private static final int MINIMUM_VALID_VALUE = 0, MAXIMUM_VALID_VALUE = 2;
+    private static final int MINIMUM_VALID_VALUE = 0, MAXIMUM_VALID_VALUE = List.of(GameSymbol.values()).size() - 1;
 
     @Override
     public GameSymbol getPlayerMove(int playerOption) {
@@ -33,15 +33,23 @@ public class GameRulesImpl implements GameRules {
 
         switch (playerMove) {
             case ROCK:
-                if (cpuMove.equals(GameSymbol.SCISSORS)) // crushes lizard
+                if (cpuMove.equals(GameSymbol.SCISSORS) || cpuMove.equals(GameSymbol.LIZARD))
                     return WINNER_MESSAGE;
                 return LOOSER_MESSAGE;
             case PAPER:
-                if (cpuMove.equals(GameSymbol.ROCK)) // disprove Spock
+                if (cpuMove.equals(GameSymbol.ROCK) || cpuMove.equals(GameSymbol.SPOCK))
                     return WINNER_MESSAGE;
                 return LOOSER_MESSAGE;
             case SCISSORS:
-                if (cpuMove.equals(GameSymbol.PAPER)) // decapitates lizard
+                if (cpuMove.equals(GameSymbol.PAPER) || cpuMove.equals(GameSymbol.LIZARD))
+                    return WINNER_MESSAGE;
+                return LOOSER_MESSAGE;
+            case LIZARD:
+                if (cpuMove.equals(GameSymbol.PAPER) || cpuMove.equals(GameSymbol.SPOCK))
+                    return WINNER_MESSAGE;
+                return LOOSER_MESSAGE;
+            case SPOCK:
+                if (cpuMove.equals(GameSymbol.ROCK) || cpuMove.equals(GameSymbol.SCISSORS))
                     return WINNER_MESSAGE;
                 return LOOSER_MESSAGE;
             default:
@@ -51,11 +59,11 @@ public class GameRulesImpl implements GameRules {
 
     @Override
     public int checksSymbol(Scanner gameScanner) {
-        System.out.println("Select your Symbol: Rock = 0, Paper = 1, Scissor = 2: ");
+        System.out.println("Select your Symbol: Rock = 0, Paper = 1, Scissor = 2, Lizard = 3, Spock = 4: ");
         int playerChoice = gameScanner.nextInt();
 
         while (isInvalidSymbol(playerChoice)) {
-            System.out.println("Invalid answer! Please Select your Symbol Correctly: Rock = 0, Paper = 1, Scissor = 2: ");
+            System.out.println("Invalid answer! Please Select your Symbol Correctly: Rock = 0, Paper = 1, Scissor = 2, Lizard = 3, Spock = 4: ");
             playerChoice = gameScanner.nextInt();
         }
 
