@@ -25,15 +25,10 @@ public class GameLoop {
 
             System.out.println(gameRules.checksResults(playerMove, cpuMove));
 
-            playerChoice = initializeSymbolValue();
             isRunning = gameRules.checksContinuity(gameScanner);
 
         } while (isRunning);
 
         gameScanner.close();
-    }
-
-    private static int initializeSymbolValue() {
-        return -1;
     }
 }
