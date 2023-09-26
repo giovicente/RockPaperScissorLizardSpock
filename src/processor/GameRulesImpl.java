@@ -1,14 +1,15 @@
-package processors;
+package processor;
 
-import core.GameRules;
+import core.processor.GameRules;
 import domain.enums.GameSymbol;
 
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
+import static processor.Constants.*;
+
 public class GameRulesImpl implements GameRules {
-    private static final int MINIMUM_VALID_VALUE = 0, MAXIMUM_VALID_VALUE = List.of(GameSymbol.values()).size() - 1;
 
     @Override
     public GameSymbol getPlayerMove(int playerOption) {
@@ -26,44 +27,49 @@ public class GameRulesImpl implements GameRules {
 
     @Override
     public String checksResults(GameSymbol playerMove, GameSymbol cpuMove) {
-        final String TIE_MESSAGE = "Tie!", WINNER_MESSAGE = "You Win!!!", LOOSER_MESSAGE = "You Loose :(";
 
         if (playerMove.equals(cpuMove))
             return TIE_MESSAGE;
 
         switch (playerMove) {
-            case ROCK:
+            case ROCK -> {
                 if (cpuMove.equals(GameSymbol.SCISSORS) || cpuMove.equals(GameSymbol.LIZARD))
                     return WINNER_MESSAGE;
                 return LOOSER_MESSAGE;
-            case PAPER:
+            }
+            case PAPER -> {
                 if (cpuMove.equals(GameSymbol.ROCK) || cpuMove.equals(GameSymbol.SPOCK))
                     return WINNER_MESSAGE;
                 return LOOSER_MESSAGE;
-            case SCISSORS:
+            }
+            case SCISSORS -> {
                 if (cpuMove.equals(GameSymbol.PAPER) || cpuMove.equals(GameSymbol.LIZARD))
                     return WINNER_MESSAGE;
                 return LOOSER_MESSAGE;
-            case LIZARD:
+            }
+            case LIZARD -> {
                 if (cpuMove.equals(GameSymbol.PAPER) || cpuMove.equals(GameSymbol.SPOCK))
                     return WINNER_MESSAGE;
                 return LOOSER_MESSAGE;
-            case SPOCK:
+            }
+            case SPOCK -> {
                 if (cpuMove.equals(GameSymbol.ROCK) || cpuMove.equals(GameSymbol.SCISSORS))
                     return WINNER_MESSAGE;
                 return LOOSER_MESSAGE;
-            default:
+            }
+            default -> {
                 return null;
+            }
         }
     }
 
     @Override
     public int checksSymbol(Scanner gameScanner) {
-        System.out.println("Select your Symbol: Rock = 0, Paper = 1, Scissors = 2, Lizard = 3, Spock = 4: ");
+        System.out.println(SYMBOL_SELECTION_MESSAGE);
         int playerChoice = gameScanner.nextInt();
 
         while (isInvalidSymbol(playerChoice)) {
-            System.out.println("Invalid answer!!! Please Select your Symbol Correctly: Rock = 0, Paper = 1, Scissors = 2, Lizard = 3, Spock = 4: ");
+            System.out.println(INVALID_SYMBOL_SELECTION_MESSAGE);
             playerChoice = gameScanner.nextInt();
         }
 
@@ -75,16 +81,16 @@ public class GameRulesImpl implements GameRules {
     }
 
     @Override
-    public char checksContinuity(Scanner gameScanner) {
-        System.out.println("Do you want to play another round? [Y/N]: ");
+    public boolean checksContinuity(Scanner gameScanner) {
+        System.out.println(ANOTHER_ROUND_MESSAGE);
         char playAgain = Character.toUpperCase(gameScanner.next().charAt(0));
 
         while (isInvalidContinuityAnswer(playAgain)) {
-            System.out.println("Invalid answer!!! Please just type 'Y' or 'N': ");
+            System.out.println(INVALID_ANOTHER_ROUND_MESSAGE);
             playAgain = Character.toUpperCase(gameScanner.next().charAt(0));
         }
 
-        return playAgain;
+        return (playAgain == 'Y');
     }
 
     private static boolean isInvalidContinuityAnswer(char playAgain) {

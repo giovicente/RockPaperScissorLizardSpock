@@ -1,16 +1,18 @@
-package processors;
+package processor;
 
-import core.GameRules;
+import core.processor.GameRules;
 import domain.enums.GameSymbol;
 
 import java.util.Scanner;
+import static processor.Constants.WELCOME_MESSAGE;
+
 public class GameLoop {
 
     public static void runGame() {
-        System.out.println("Welcome to the Rock, Paper, Scissors, Lizard and Spock Game!!!");
+        System.out.println(WELCOME_MESSAGE);
         Scanner gameScanner = new Scanner(System.in);
         GameRules gameRules = new GameRulesImpl();
-        char playAgain;
+        boolean isRunning;
 
         do {
             int playerChoice = gameRules.checksSymbol(gameScanner);
@@ -24,9 +26,11 @@ public class GameLoop {
             System.out.println(gameRules.checksResults(playerMove, cpuMove));
 
             playerChoice = initializeSymbolValue();
-            playAgain = gameRules.checksContinuity(gameScanner);
+            isRunning = gameRules.checksContinuity(gameScanner);
 
-        } while (playAgain == 'Y');
+        } while (isRunning);
+
+        gameScanner.close();
     }
 
     private static int initializeSymbolValue() {

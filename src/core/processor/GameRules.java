@@ -1,4 +1,4 @@
-package core;
+package core.processor;
 
 import domain.enums.GameSymbol;
 
@@ -8,6 +8,6 @@ public interface GameRules {
     GameSymbol getPlayerMove(int playerOption);
     GameSymbol getCpuMove();
     String checksResults(GameSymbol playerMove, GameSymbol cpuMove);
-    char checksContinuity(Scanner gameScanner);
+    boolean checksContinuity(Scanner gameScanner);
     int checksSymbol(Scanner gameScanner);
 }
