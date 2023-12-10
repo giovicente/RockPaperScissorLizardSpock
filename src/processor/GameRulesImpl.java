@@ -76,7 +76,7 @@ public class GameRulesImpl implements GameRules {
         return playerChoice;
     }
 
-    private static boolean isInvalidSymbol(int playerChoice) {
+    public static boolean isInvalidSymbol(int playerChoice) {
         return (playerChoice < MINIMUM_VALID_VALUE || playerChoice > MAXIMUM_VALID_VALUE);
     }
 
@@ -93,7 +93,7 @@ public class GameRulesImpl implements GameRules {
         return (playAgain == 'Y');
     }
 
-    private static boolean isInvalidContinuityAnswer(char playAgain) {
+    public static boolean isInvalidContinuityAnswer(char playAgain) {
         return (playAgain != 'Y' && playAgain != 'N');
     }
 }
