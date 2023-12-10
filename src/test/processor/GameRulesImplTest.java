@@ -115,7 +115,7 @@ class GameRulesImplTest {
 
     // Rock scenarios
     @Test
-    void checkResultsRockWinsScissors() {
+    void checksResultsRockWinsScissors() {
         GameSymbol playerMove = GameSymbol.ROCK;
         GameSymbol cpuMove = GameSymbol.SCISSORS;
 
@@ -126,7 +126,7 @@ class GameRulesImplTest {
     }
 
     @Test
-    void checkResultsRockWinsLizard() {
+    void checksResultsRockWinsLizard() {
         GameSymbol playerMove = GameSymbol.ROCK;
         GameSymbol cpuMove = GameSymbol.LIZARD;
 
@@ -137,7 +137,7 @@ class GameRulesImplTest {
     }
 
     @Test
-    void checkResultsRockLosesPaper() {
+    void checksResultsRockLosesPaper() {
         GameSymbol playerMove = GameSymbol.ROCK;
         GameSymbol cpuMove = GameSymbol.PAPER;
 
@@ -148,7 +148,7 @@ class GameRulesImplTest {
     }
 
     @Test
-    void checkResultsRockLosesSpock() {
+    void checksResultsRockLosesSpock() {
         GameSymbol playerMove = GameSymbol.ROCK;
         GameSymbol cpuMove = GameSymbol.SPOCK;
 
@@ -160,7 +160,7 @@ class GameRulesImplTest {
 
     // Paper scenarios
     @Test
-    void checkResultsPaperWinsRock() {
+    void checksResultsPaperWinsRock() {
         GameSymbol playerMove = GameSymbol.PAPER;
         GameSymbol cpuMove = GameSymbol.ROCK;
 
@@ -171,7 +171,7 @@ class GameRulesImplTest {
     }
 
     @Test
-    void checkResultsPaperWinsSpock() {
+    void checksResultsPaperWinsSpock() {
         GameSymbol playerMove = GameSymbol.PAPER;
         GameSymbol cpuMove = GameSymbol.SPOCK;
 
@@ -182,7 +182,7 @@ class GameRulesImplTest {
     }
 
     @Test
-    void checkResultsPaperLosesScissors() {
+    void checksResultsPaperLosesScissors() {
         GameSymbol playerMove = GameSymbol.PAPER;
         GameSymbol cpuMove = GameSymbol.SCISSORS;
 
@@ -193,7 +193,7 @@ class GameRulesImplTest {
     }
 
     @Test
-    void checkResultsPaperLosesLizard() {
+    void checksResultsPaperLosesLizard() {
         GameSymbol playerMove = GameSymbol.PAPER;
         GameSymbol cpuMove = GameSymbol.LIZARD;
 
@@ -205,7 +205,7 @@ class GameRulesImplTest {
 
     // Scissors scenarios
     @Test
-    void checkResultsScissorsWinsPaper() {
+    void checksResultsScissorsWinsPaper() {
         GameSymbol playerMove = GameSymbol.SCISSORS;
         GameSymbol cpuMove = GameSymbol.PAPER;
 
@@ -216,7 +216,7 @@ class GameRulesImplTest {
     }
 
     @Test
-    void checkResultsScissorsWinsLizard() {
+    void checksResultsScissorsWinsLizard() {
         GameSymbol playerMove = GameSymbol.SCISSORS;
         GameSymbol cpuMove = GameSymbol.LIZARD;
 
@@ -227,7 +227,7 @@ class GameRulesImplTest {
     }
 
     @Test
-    void checkResultsScissorsLosesRock() {
+    void checksResultsScissorsLosesRock() {
         GameSymbol playerMove = GameSymbol.SCISSORS;
         GameSymbol cpuMove = GameSymbol.ROCK;
 
@@ -238,7 +238,7 @@ class GameRulesImplTest {
     }
 
     @Test
-    void checkResultsScissorsLosesSpock() {
+    void checksResultsScissorsLosesSpock() {
         GameSymbol playerMove = GameSymbol.SCISSORS;
         GameSymbol cpuMove = GameSymbol.SPOCK;
 
@@ -250,7 +250,7 @@ class GameRulesImplTest {
 
     // Lizard Scenarios
     @Test
-    void checkResultsLizardWinsPaper() {
+    void checksResultsLizardWinsPaper() {
         GameSymbol playerMove = GameSymbol.LIZARD;
         GameSymbol cpuMove = GameSymbol.PAPER;
 
@@ -261,7 +261,7 @@ class GameRulesImplTest {
     }
 
     @Test
-    void checkResultsLizardWinsSpock() {
+    void checksResultsLizardWinsSpock() {
         GameSymbol playerMove = GameSymbol.LIZARD;
         GameSymbol cpuMove = GameSymbol.SPOCK;
 
@@ -272,7 +272,7 @@ class GameRulesImplTest {
     }
 
     @Test
-    void checkResultsLizardLosesRock() {
+    void checksResultsLizardLosesRock() {
         GameSymbol playerMove = GameSymbol.LIZARD;
         GameSymbol cpuMove = GameSymbol.ROCK;
 
@@ -283,7 +283,7 @@ class GameRulesImplTest {
     }
 
     @Test
-    void checkResultsLizardLosesScissors() {
+    void checksResultsLizardLosesScissors() {
         GameSymbol playerMove = GameSymbol.LIZARD;
         GameSymbol cpuMove = GameSymbol.SCISSORS;
 
@@ -295,7 +295,7 @@ class GameRulesImplTest {
 
     // Spock scenarios
     @Test
-    void checkResultsSpockWinsRock() {
+    void checksResultsSpockWinsRock() {
         GameSymbol playerMove = GameSymbol.SPOCK;
         GameSymbol cpuMove = GameSymbol.ROCK;
 
@@ -306,7 +306,7 @@ class GameRulesImplTest {
     }
 
     @Test
-    void checkResultsSpockWinsScissors() {
+    void checksResultsSpockWinsScissors() {
         GameSymbol playerMove = GameSymbol.SPOCK;
         GameSymbol cpuMove = GameSymbol.SCISSORS;
 
@@ -317,7 +317,7 @@ class GameRulesImplTest {
     }
 
     @Test
-    void checkResultsSpockLosesPaper() {
+    void checksResultsSpockLosesPaper() {
         GameSymbol playerMove = GameSymbol.SPOCK;
         GameSymbol cpuMove = GameSymbol.PAPER;
 
@@ -328,7 +328,7 @@ class GameRulesImplTest {
     }
 
     @Test
-    void checkResultsSpockLosesLizard() {
+    void checksResultsSpockLosesLizard() {
         GameSymbol playerMove = GameSymbol.SPOCK;
         GameSymbol cpuMove = GameSymbol.LIZARD;
 
