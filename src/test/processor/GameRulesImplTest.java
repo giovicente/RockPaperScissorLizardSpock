@@ -357,7 +357,7 @@ class GameRulesImplTest {
     // Verify game symbols scenarios
     @Test
     void isInvalidSymbolTestTruePositiveNumber() {
-        final int INVALID_OPTION = 10;
+        final int INVALID_OPTION = 5;
         Assertions.assertTrue(GameRulesImpl.isInvalidSymbol(INVALID_OPTION));
     }
 
