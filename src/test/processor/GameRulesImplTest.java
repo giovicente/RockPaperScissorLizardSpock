@@ -401,8 +401,9 @@ class GameRulesImplTest {
     void testPrintGameResults() {
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outputStream));
+        final int WINNING_COUNTER_MOCK = 3, LOOSING_COUNTER_MOCK = 6, TYING_COUNTER_MOCK = 5;
 
-        gameRules.printGameResults(3, 6, 5);
+        gameRules.printGameResults(WINNING_COUNTER_MOCK, LOOSING_COUNTER_MOCK, TYING_COUNTER_MOCK);
         System.setOut(System.out);
 
         String actualPrintedOutput = outputStream.toString();
