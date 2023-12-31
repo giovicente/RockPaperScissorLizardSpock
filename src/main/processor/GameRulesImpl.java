@@ -1,6 +1,6 @@
 package main.processor;
 
-import main.core.processor.GameRules;
+import main.core.GameRules;
 import main.domain.WinningConditions;
 import main.domain.enums.GameSymbol;
 

@@ -1,4 +1,4 @@
-package main.core.processor;
+package main.core;
 
 import main.domain.enums.GameSymbol;
 

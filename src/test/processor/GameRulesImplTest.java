@@ -1,6 +1,6 @@
 package test.processor;
 
-import main.core.processor.GameRules;
+import main.core.GameRules;
 import main.domain.enums.GameSymbol;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
