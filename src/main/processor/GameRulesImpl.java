@@ -1,12 +1,12 @@
-package processor;
+package main.processor;
 
-import core.processor.GameRules;
-import domain.WinningConditions;
-import domain.enums.GameSymbol;
+import main.core.processor.GameRules;
+import main.domain.WinningConditions;
+import main.domain.enums.GameSymbol;
 
 import java.util.*;
 
-import static processor.Constants.*;
+import static main.processor.Constants.*;
 
 public class GameRulesImpl implements GameRules {
 

@@ -1,6 +1,6 @@
-package core.processor;
+package main.core.processor;
 
-import domain.enums.GameSymbol;
+import main.domain.enums.GameSymbol;
 
 import java.util.Scanner;
 

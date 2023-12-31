@@ -1,10 +1,10 @@
-package processor;
+package main.processor;
 
-import core.processor.GameRules;
-import domain.enums.GameSymbol;
+import main.core.processor.GameRules;
+import main.domain.enums.GameSymbol;
 
 import java.util.Scanner;
-import static processor.Constants.WELCOME_MESSAGE;
+import static main.processor.Constants.WELCOME_MESSAGE;
 
 public class GameLoop {
 

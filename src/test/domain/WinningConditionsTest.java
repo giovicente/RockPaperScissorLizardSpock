@@ -1,14 +1,14 @@
-package test.processor;
+package test.domain;
 
-import domain.WinningConditions;
-import domain.enums.GameSymbol;
+import main.domain.WinningConditions;
+import main.domain.enums.GameSymbol;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import static processor.Constants.WINNER_MESSAGE;
+import static main.processor.Constants.WINNER_MESSAGE;
 
 public class WinningConditionsTest {
     @Test

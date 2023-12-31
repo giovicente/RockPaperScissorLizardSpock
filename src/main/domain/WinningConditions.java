@@ -1,11 +1,11 @@
-package domain;
+package main.domain;
 
-import domain.enums.GameSymbol;
+import main.domain.enums.GameSymbol;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import static processor.Constants.WINNER_MESSAGE;
+import static main.processor.Constants.WINNER_MESSAGE;
 
 public class WinningConditions {
 

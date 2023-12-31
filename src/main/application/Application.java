@@ -1,6 +1,6 @@
-package application;
+package main.application;
 
-import processor.GameLoop;
+import main.processor.GameLoop;
 
 public class Application {
     public static void main(String[] args) {

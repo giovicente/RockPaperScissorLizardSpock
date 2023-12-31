@@ -1,6 +1,6 @@
-package processor;
+package main.processor;
 
-import domain.enums.GameSymbol;
+import main.domain.enums.GameSymbol;
 import java.util.List;
 
 public class Constants {

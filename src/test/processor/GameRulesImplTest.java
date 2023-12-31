@@ -1,20 +1,17 @@
 package test.processor;
 
-import core.processor.GameRules;
-import domain.WinningConditions;
-import domain.enums.GameSymbol;
+import main.core.processor.GameRules;
+import main.domain.enums.GameSymbol;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import processor.GameRulesImpl;
+import main.processor.GameRulesImpl;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Random;
 import java.util.Scanner;
 
-import static processor.Constants.*;
+import static main.processor.Constants.*;
 
 class GameRulesImplTest {
 
