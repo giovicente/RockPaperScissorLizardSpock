@@ -51,6 +51,16 @@ public class GameRulesImpl implements GameRules {
         return playerChoice;
     }
 
+    @Override
+    public void printGameResults(int winningCounter, int loosingCounter, int tyingCounter) {
+        System.out.println(
+                "=================== RESULTS ===================\n" +
+                "WINS: " + winningCounter + "\n" +
+                "LOSSES: " + loosingCounter + "\n" +
+                "TIES: " + tyingCounter
+        );
+    }
+
     public static boolean isInvalidSymbol(int playerChoice) {
         return (playerChoice < MINIMUM_VALID_VALUE || playerChoice > MAXIMUM_VALID_VALUE);
     }

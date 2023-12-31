@@ -7,7 +7,9 @@ import org.junit.jupiter.api.Test;
 import main.processor.GameRulesImpl;
 
 import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
+import java.io.PrintStream;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -393,5 +395,25 @@ class GameRulesImplTest {
         char continuityAnswer = invalidContinuityChars.charAt(randomIndex.nextInt(invalidContinuityChars.length()));
 
         Assertions.assertTrue(GameRulesImpl.isInvalidContinuityAnswer(continuityAnswer));
+    }
+
+    @Test
+    void testPrintGameResults() {
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outputStream));
+        final int WINNING_COUNTER_MOCK = 3, LOOSING_COUNTER_MOCK = 6, TYING_COUNTER_MOCK = 5;
+
+        gameRules.printGameResults(WINNING_COUNTER_MOCK, LOOSING_COUNTER_MOCK, TYING_COUNTER_MOCK);
+        System.setOut(System.out);
+
+        String actualPrintedOutput = outputStream.toString();
+
+        String expectedPrintedOutput =
+                "=================== RESULTS ===================\n" +
+                "WINS: " + "3" + "\n" +
+                "LOSSES: " + "6" + "\n" +
+                "TIES: " + "5" + "\r\n";
+
+        Assertions.assertEquals(expectedPrintedOutput, actualPrintedOutput);
     }
 }

@@ -2,9 +2,8 @@ package main.processor;
 
 import main.core.GameRules;
 import main.domain.enums.GameSymbol;
-
 import java.util.Scanner;
-import static main.processor.Constants.WELCOME_MESSAGE;
+import static main.processor.Constants.*;
 
 public class GameLoop {
 
@@ -13,6 +12,7 @@ public class GameLoop {
         Scanner gameScanner = new Scanner(System.in);
         GameRules gameRules = new GameRulesImpl();
         boolean isRunning;
+        int winningCounter = 0, loosingCounter = 0, tyingCounter = 0;
 
         do {
             int playerChoice = gameRules.checksSymbol(gameScanner);
@@ -23,12 +23,17 @@ public class GameLoop {
             System.out.println("Your Choice: " + playerMove.getEmojiSymbol());
             System.out.println("CPU Choice: " + cpuMove.getEmojiSymbol());
 
-            System.out.println(gameRules.checksResults(playerMove, cpuMove));
+            String resultMessage = gameRules.checksResults(playerMove, cpuMove);
+            System.out.println(resultMessage);
+
+            if (resultMessage.equals(WINNER_MESSAGE)) { winningCounter++; }
+            else if (resultMessage.equals(LOOSER_MESSAGE)) { loosingCounter++; }
+            else { tyingCounter++; }
 
             isRunning = gameRules.checksContinuity(gameScanner);
-
         } while (isRunning);
 
         gameScanner.close();
+        gameRules.printGameResults(winningCounter, loosingCounter, tyingCounter);
     }
 }
